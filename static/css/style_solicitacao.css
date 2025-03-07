@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+
 /* Fonte padrão e cor do texto */
 body {
     font-family: 'Roboto', sans-serif;
@@ -20,6 +21,16 @@ body {
     width: 100%;
 }
 
+.mapa{
+
+}
+
+.conteiner{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
 /* Formulário de Evento */
 .formulario-evento {
     background-color: white;
@@ -32,14 +43,14 @@ body {
 
 .formulario-evento h3 {
     text-align: center;
-    color: #0a4500;
+    color: #00796B;
     margin-bottom: 20px;
 }
 
 /* Estilo dos Labels e Inputs */
 .form-group label {
     font-weight: bold;
-    color: #0a4500;
+    color: #00796B;
 }
 
 .form-control {
@@ -55,7 +66,7 @@ textarea.form-control {
 
 /* Estilo dos Botões */
 .btn-success {
-    background-color: #0a4500;
+    background-color: #00796B;
     border: none;
     width: 100%;
     padding: 10px;

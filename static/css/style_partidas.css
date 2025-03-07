@@ -1,0 +1,44 @@
+.partidas {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f0f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.partida {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.2s;
+}
+
+.partida:hover {
+    transform: translateY(-5px);
+}
+
+.partida h3 {
+    color: #004d40;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.partida p {
+    margin: 5px 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background: #004d40;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

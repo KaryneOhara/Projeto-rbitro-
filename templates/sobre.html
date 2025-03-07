@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style_sobre.css') }}">
 </head>
 <body>
@@ -29,29 +30,48 @@
         <div class="desenvolvedores">
             <h1>Nossa Equipe</h1>
             <div class="dev-container">
-                <div class="dev-card">
-                    <img src="{{url_for('static', filename='images/dev1.jpg')}}" alt="Foto do Desenvolvedor 1">
-                    <h2>Nome do Desenvolvedor 1</h2>
-                    <p>Função ou breve descrição</p>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body text-center">
+                        <div class="imagem-container">
+                            <img class="imagem-perfil" src="https://avatars.githubusercontent.com/u/153088012?v=4" alt="Ariane Valéria">
+                        </div>
+                        <h5 class="card-title">Ariane Valéria</h5>
+                        <p class="card-text">Desenvolvedora</p>
+                        <a href="https://github.com/arianevaleira" class="btn btn-primary" target="_blank">GitHub</a>
+                    </div>
                 </div>
-                <div class="dev-card">
-                    <img src="{{url_for('static', filename='imagem/dev3')}}" alt="Foto do Desenvolvedor 2">
-                    <h2>Nome do Desenvolvedor 2</h2>
-                    <p>Função ou breve descrição</p>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body text-center">
+                        <div class="imagem-container">
+                            <img class="imagem-perfil" src="https://avatars.githubusercontent.com/u/150279762?v=4" alt="Karyne Ohara">
+                        </div>
+                        <h5 class="card-title">Karyne Ohara</h5>
+                        <p class="card-text">Desenvolvedora</p>
+                        <a href="https://github.com/KaryneOhara" class="btn btn-primary" target="_blank">GitHub</a>
+                    </div>
                 </div>
-                <div class="dev-card">
-                    <img src="{{url_for('static', filename='images/dev2.jpg')}}" alt="Foto do Desenvolvedor 2">
-                    <h2>Nome do Desenvolvedor 2</h2>
-                    <p>Função ou breve descrição</p>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body text-center">
+                        <div class="imagem-container">
+                            <img class="imagem-perfil" src="https://avatars.githubusercontent.com/u/154358850?v=4" alt="Maria Eduarda">
+                        </div>
+                        <h5 class="card-title">Maria Eduarda</h5>
+                        <p class="card-text">Integrante</p>
+                        <a href="https://github.com/MariaEduardaSilvaa" class="btn btn-primary" target="_blank">GitHub</a>
+                    </div>
                 </div>
-                <div class="dev-card">
-                    <img src="{{url_for('static', filename='images/dev2.jpg')}}" alt="Foto do Desenvolvedor 2">
-                    <h2>Nome do Desenvolvedor 2</h2>
-                    <p>Função ou breve descrição</p>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body text-center">
+                        <div class="imagem-container">
+                            <img class="imagem-perfil" src="https://avatars.githubusercontent.com/u/150279957?v=4" alt="Joaquim Antonio">
+                        </div>
+                        <h5 class="card-title">Joaquim Antonio</h5>
+                        <p class="card-text">Integrante</p>
+                        <a href="https://github.com/Joak12" class="btn btn-primary" target="_blank">GitHub</a>
+                    </div>
                 </div>
-                <!-- Adicione mais dev-cards conforme necessário -->
             </div>
-        </div>        
+        </div>    
     </div>
 </body>
 </html>

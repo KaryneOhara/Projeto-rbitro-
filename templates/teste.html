@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Inicio</title>
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style_home.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="cabecalho">
+        <div class="menu-hamburguer" onclick="toggleMenu()">
+            <span class="material-icons">menu</span>
+        </div>
+        
+        <div class="logo">
+            <a href="{{url_for('home')}}">
+                <img src="/static/assets/logo.png">
+            </a>
+        </div>
+
+        <div class="user">
+            <a href="{{url_for('configuracoes')}}">    
+                <div class="foto">
+                    <span class="material-icons perfil">
+                        account_circle
+                    </span>
+                </div>
+            </a>
+        </div>
+        
+    </div>
+    
+    <div class="container">
+        <div class="main-content">
+            <div class="barra-lateral">
+                <div class="rotas">
+                    
+                    <div class="link">
+                        <div class="icone">
+                            <span class="material-icons icones">
+                                person_add_alt
+                            </span>
+                        </div>  
+                        <a href="{{url_for('solicitacao')}}">Solicitações</a>
+                    </div>
+                    <div class="link">
+                        <div class="icone">
+                            <span class="material-icons icones">
+                                notifications
+                            </span>
+                        </div>
+                        <a href="{{url_for('notificacoes')}}">Notificações</a>
+                    </div>
+                    <div class="link">
+                        <div class="icone">
+                            <span class="material-icons icones">
+                                email
+                            </span>
+                        </div>
+                        <a href="#comentarios">Avaliações</a>
+                    </div>
+                    <div class="link">
+                        <div class="icone">
+                            <span class="material-icons icones">
+                                settings
+                            </span>
+                        </div>
+                        <a href="{{url_for('configuracoes')}}">Configurações</a>
+                    </div>
+                    <div class="link">
+                        <div class="icone">
+                            <span class="material-icons icones">
+                                explore
+                            </span>
+                        </div>
+                        <a href="{{url_for('sobre')}}">Sobre</a>
+                    </div>
+                </div>
+            </div>
+        {%block conteudo%}
+        <div class="conteudo">
+            <div class="acesso-rapido">
+                
+                <div id="cont"  class="solicitacao">
+                    <a href="{{url_for('solicitacao')}}"> 
+                        <div class="title">
+                            <span class="material-icons icones">
+                                person_add_alt
+                            </span>
+                            <p>Solicitações</p>
+                        </div>
+                        <p>Solicitar uma partida de forma rápida e fácil. Preencha o formulario e viva uma experiêcencia unica</p>
+                    </a>
+                </div>
+                    
+                <div id="cont"  class="partidas">
+                    <a href="{{url_for('partidas')}}">
+                        <div class="title">
+                            <span class="material-icons icones">
+                                sports
+                            </span>
+                            <p>Partidas</p>
+                        </div>
+                        <p>Veja aqui suas partidas que estão em aberto. Explore suas experiêcencias ja vividas</p>
+                    </a>
+                </div>
+                
+
+               <div id="cont"  class="mensagem">
+                    <a href="{{url_for('chat')}}">
+                        <div class="title">
+                            <span class="material-icons icones">
+                                mark_unread_chat_alt
+                            </span>
+                            <p>Mensagens</p>
+                        </div>
+                        <p>Seu chat de mensagens te aguarda. Mantenha contato com eficiência e segurança</p>
+                    </a>
+                </div>
+            </div>
+
+            
+            <div class="avaliacao">
+                <p class="title">Avaliações</p>
+                <div class="notas">
+                    <p>4.5</p>
+                </div>
+
+                <div class="comentario" id="comentarios">
+                    <div class="coment">
+                        <div class="usuario">
+                            <div class="img">
+                                <span class="material-icons imagem">
+                                    account_circle
+                                </span>
+                            </div>
+                            <p class="name">Karyne Ohara</p>
+                        </div>
+                        <div class="texto">
+                              <p>Esse é o comentario que eu fiz sobre esse, na selva o patinho feio andava em frente a lagoa e agora tem vida boa</p>
+                        </div>
+                    </div>
+                    <div class="coment">
+                        <div class="usuario">
+                            <div class="img">
+                                <span class="material-icons imagem">
+                                    account_circle
+                                </span>
+                            </div>
+                            <p class="name">Karyne Ohara</p>
+                        </div>
+                        <div class="texto">
+                              <p>Esse é o comentario que eu fiz sobre esse, na selva o patinho feio andava em frente a lagoa e agora tem vida boa</p>
+                        </div>
+                    </div>
+                    <div class="coment">
+                        <div class="usuario">
+                            <div class="img">
+                                <span class="material-icons imagem">
+                                    account_circle
+                                </span>
+                            </div>
+                            <p class="name">Karyne Ohara</p>
+                        </div>
+                        <div class="texto">
+                              <p>Esse é o comentario que eu fiz sobre esse, na selva o patinho feio andava em frente a lagoa e agora tem vida boa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        {%endblock%}  
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© Companhia S.A., 2017-2018 - <a href="#">Privacidade</a> - <a href="#">Termos</a></p>
+        <a href="#top">Voltar ao topo</a>
+    </footer>
+  
+    <script>
+        function toggleMenu() {
+            const barraLateral = document.querySelector('.barra-lateral');
+            barraLateral.classList.toggle('ativo');
+        }
+    </script>
+    
+</body>
+</html>

@@ -7,6 +7,7 @@
     <link href="{{url_for('static', filename='css/styles.css')}}" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.cs" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -54,38 +55,38 @@
                 <form action="{{url_for('cadastro')}}" class="form" method="POST">
                     <div class="nome gru-input">
                         <label>Nome:</label>
-                        <input type="text" name="nome">
+                        <input type="text" name="nome" required>
                     </div>
                     <div class="gru-input gru-input-second">
                         <div class="cpf">    
                             <label>CPF/CNPJ:</label>
-                            <input type="number" name="cpf" placeholder="CPF/CNPJ">
+                            <input type="number" name="cpf" placeholder="CPF/CNPJ" required>
                         </div>
                         <div class="telefone">
                             <label>Telefone:</label>
-                            <input type="number" name="telefone" placeholder="Telefone">
+                            <input type="number" name="telefone" placeholder="Telefone" required>
                         </div>
                     </div>
                     <div class="gru-input">
                         <label>Email:</label>
-                        <input type="email" name="email">
+                        <input type="email" name="email" required>
                     </div>
                     <div class="gru-input gru-input-second">
                         <div class="senha1">
                             <label>Crie Sua Senha:</label>
-                            <input type="password" name="senha">
+                            <input type="password" name="senha" required>
                         </div>
                         <div class="senha1">
                             <label>Confirme Sua Senha:</label>
-                            <input type="password" name="senha-conf">
+                            <input type="password" name="confirmaSenha" required>
                         </div>
                     </div>
                     
                     <div class="gru-input">
                        <label>Selecione Sua Area:</label>
                        <select id="userType" name="tipo">
-                           <option value="comum" selected>Contratante</option>
-                           <option value="profissional">Árbitro</option>
+                           <option value="contratante" selected>Contratante</option>
+                           <option value="arbitro">Árbitro</option>
                        </select>
                     </div>
                     

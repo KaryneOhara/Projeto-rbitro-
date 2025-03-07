@@ -1,121 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicial</title>
+    <title>Página Inicial</title>
     <link rel="stylesheet" href="{{url_for('static', filename='css/style_inicial.css')}}">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #E0F2F1;
+            color: #004D40;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .navbar, footer {
+            background-color: #00796B;
+        }
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-grow: 1;
+            padding: 50px;
+        }
+
+        .hero-text {
+            max-width: 40%;
+            text-align: left;
+            max-height: 300px;
+        }
+        .hero-text h1 {
+            font-size: 2.5rem;
+            margin-top: 20px; /* Espaçamento superior para separar do parágrafo */
+        }
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 40px; /* Aumentei o espaçamento inferior */
+        }
+
+        .hero-card {
+            width: 50%;
+            height: 300px;
+            background-color: #80CBC4;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .btn-custom, .btn-outline {
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 1rem;
+        }
+        .btn-custom {
+            background-color: #4DB6AC;
+            border: none;
+            color: white;
+            text-decoration: none;
+        }
+        .btn-outline {
+            border: 2px solid #4DB6AC;
+            color: #4DB6AC;
+            background: none;
+            text-decoration: none;
+        }
+        
+        .btn-outline:hover {
+            background-color: #4DB6AC;
+            color: white;
+            transform: scale(1.05);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 15px 0;
+        }
+    </style>
 </head>
 <body>
-     <!-- Navbar -->
-    <nav class="navbar">
-      <div class="navbar-brand">Carousel</div>
-      <div class="navbar-links">
-          <a href="#">Home</a>
-          <a href="#">Link</a>
-          <a href="#" class="disabled">Desativado</a>
-      </div>
-      <div class="link">
-          <a href="{{url_for('login')}}">Login</a>
-      </div>
-  </nav>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="{{url_for('login')}}">Árbitros +</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="{{url_for('login')}}">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{url_for('sobre')}}">Sobre</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-  <!-- Carousel -->
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img class="d-block w-100" src="" alt="Primeiro Slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src=".../800x400?auto=yes&bg=666&fg=444&text=Segundo Slide" alt="Segundo Slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src=".../800x400?auto=yes&bg=555&fg=333&text=Terceiro Slide" alt="Terceiro Slide">
-      </div>
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Anterior</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Próximo</span>
-    </a>
-  </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <div class="hero-titulo">
+                <h1>Prontos para conduzir o jogo com excelência!</h1>
+            </div>
+            <div class="hero-paragrafo">
+               <p>Nossa equipe de árbitros está preparada para garantir justiça e profissionalismo em cada partida.</p>
+            </div>
+            <div class="button-group">
+                <a href="{{url_for('saiba_mais')}}" class="btn-custom">Saiba Mais</a>
+                <a href="{{url_for('cadastro')}}" class="btn-outline">Cadastre-se</a>
+            </div>
+        </div>
+        <div class="hero-card">
+            <img src="/static/assets/desenho tela inicial (1).png" alt="Jogadores">
+        </div>
+    </section>
 
-  <!-- Features Section -->
-  <section class="features">
-    <div class="card-group">
-      <div class="card">
-        <img class="card-img-top" src="/static/assets/img1.png" alt="Imagem de capa do card">
-        <div class="card-body">
-          <h5 class="card-title">Título do card</h5>
-          <p class="card-text">Este é um card maior com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este conteúdo é um pouco maior, para demonstração.</p>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">Atualizados 3 minutos atrás</small>
-        </div>
-      </div>
-      <div class="card">
-        <img class="card-img-top" src="/static/assets/img1.png" alt="Imagem de capa do card">
-        <div class="card-body">
-          <h5 class="card-title">Título do card</h5>
-          <p class="card-text">Este é um card com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional.</p>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">Atualizados 3 minutos atrás</small>
-        </div>
-      </div>
-      <div class="card">
-        <img class="card-img-top" src="/static/assets/img1.png" alt="Imagem de capa do card">
-        <div class="card-body">
-          <h5 class="card-title">Título do card</h5>
-          <p class="card-text">Este é um card maior com suporte a texto embaixo, que funciona como uma introdução a um conteúdo adicional. Este card tem o conteúdo ainda maior que o primeiro, para mostrar a altura igual, em ação.</p>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">Atualizados 3 minutos atrás</small>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Featurettes Section -->
-  <section class="featurettes">
-      <div class="featurette">
-        <div class="titulo-p">
-          <h2>Primeiro título de featurezinhas. Surpreendente, não?!</h2>
-          <p>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.</p>
-        </div>
-        <div class="placeholder"></div>
-      </div>
-      <div class="featurette">
-        <div class="placeholder"></div>
-        <div class="titulo-p">
-          <h2>Aêêê, moleque! Tá legal ou não tá?</h2>
-          <p>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.</p>
-        </div>
-      </div>
-      <div class="featurette">
-        <div class="titulo-p">
-          <h2>E, por último, essa aqui. Xeque-mate!</h2>
-          <p>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.</p>
-        </div>
-        <div class="placeholder"></div>
-      </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-      <p>© Companhia S.A., 2017-2018 - <a href="#">Privacidade</a> - <a href="#">Termos</a></p>
-      <a href="#top">Voltar ao topo</a>
-  </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

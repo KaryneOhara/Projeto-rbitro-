@@ -1,103 +1,111 @@
-* {
-    margin: 0;
-    padding: 0;  
-    box-sizing: border-box; 
-}
-
-html, body {
-    height: auto;
-    font-family: 'Arial', sans-serif; 
-}
-
+/* Estilização geral para o conteúdo da página */
 .conteudo {
-    display: flex;
-    justify-content: center;
-    flex-direction: column; 
-}
-
-.conteudo h1 {
-    margin: 20px 0; 
-    font-size: 2rem; 
-    color: #52883b; 
-}
-
-.conteudo p {
-    font-size: 16px;  
-    margin-top: 10px; 
-    color: #555; 
-}
-
-.sobre, .importancia, .atende {
-    width: 80%;
-    margin: 20px 0;
-    padding: 10px; 
-    border-radius: 8px;
-    background-color: #f9f9f9; 
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
-    align-self: center;
-}
-
-
-.desenvolvedores {
-    margin: 40px 0;
     padding: 20px;
-    background-color: #f9f9f9;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo para as seções sobre */
+.sobre, .importancia, .atende, .desenvolvedores {
+    margin-bottom: 40px;
+    padding: 20px;
     border-radius: 8px;
+    background-color: #f9f9f9;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 80%;
 }
 
-.desenvolvedores h1 {
-    font-size: 2rem;
-    color: #52883b;
+/* Títulos das seções */
+h1 {
+    color: #2c3e50;
+    font-size: 2em;
     margin-bottom: 20px;
+    border-bottom: 2px solid #00796B;
+    padding-bottom: 10px;
 }
 
+/* Estilo para parágrafos */
+p {
+    color: #34495e;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Estilo para o container dos cards */
 .dev-container {
     display: flex;
-    justify-content: center;
-    gap: 20px;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.dev-card {
-    background-color: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    min-width: 300px;
-    min-height: 350px;
+/* Estilização dos cards */
+.card {
+    flex: 1 0 21%; /* Ajusta a largura dos cards */
+    margin: 10px;
+    transition: transform 0.3s;
 }
 
-.dev-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+.card:hover {
+    transform: scale(1.05);
 }
 
-.dev-card h2 {
-    font-size: 1.1rem;
-    color: #333;
-    margin: 10px 0 5px;
+/* Estilo das imagens dos cards */
+.card-img-top {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+/* Estilo para a imagem do perfil */
+.imagem-container {
+    overflow: hidden; /* Esconde partes da imagem que saem do contêiner */
+    width: 100px; /* Largura do círculo */
+    height: 100px; /* Altura do círculo */
+    border-radius: 50%; /* Faz a imagem ser circular */
+    margin: 0 auto 15px; /* Centraliza e adiciona espaço abaixo */
 }
 
-.dev-card p {
-    font-size: 0.9rem;
-    color: #555;
+.imagem-perfil {
+    width: 100%; /* Faz a imagem ocupar todo o contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove espaços indesejados em volta da imagem */
 }
 
+/* Restante do CSS já definido para os cards */
+.card {
+    flex: 1 0 21%; /* Ajusta a largura dos cards */
+    margin: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #eaeaea; /* Borda sutil */
+    border-radius: 8px; /* Bordas arredondadas */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
+}
+
+
+
+/* Estilo do botão */
+.btn {
+    background-color: #00796B;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #035e53;
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
     .dev-container {
         flex-direction: column;
         align-items: center;
     }
 
-    .dev-card {
-        width: 80%;
-        margin-bottom: 20px;
+    .card {
+        width: 100%;
+        max-width: 300px;
     }
 }

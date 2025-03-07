@@ -13,7 +13,7 @@ body {
 
 .form-title {
     font-size: 24px;
-    color: #4b804b;
+    color: #00796B;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -32,7 +32,7 @@ body {
 .infor_perfil label {
     display: block;
     font-weight: bold;
-    color: #4b804b;
+    color: #00796B;
     margin-bottom: 5px;
 }
 
@@ -59,7 +59,7 @@ input:focus, select:focus, textarea:focus {
 .photo-circle {
     width: 50px;
     height: 50px;
-    background-color: #4b804b;
+    background-color: #00796B;
     color: white;
     border-radius: 50%;
     display: flex;
@@ -72,7 +72,7 @@ input:focus, select:focus, textarea:focus {
 .alterar-btn {
     background-color: transparent;
     border: none;
-    color: #4b804b;
+    color: #00796B;
     font-weight: bold;
     cursor: pointer;
 }

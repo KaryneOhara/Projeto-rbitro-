@@ -1,252 +1,247 @@
 *{
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-}
-
-body{
-    font-family: "Open Sans", sans-serif;
-}
-
-
-/*Div onde esta os dois conteudos*/
-.conteiner{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   height: 100vh;
-   background-color: #ecf0f1;
-}
-
-i{
-    width: 7px;
-    height: 7px;
-    background-color: #5faf58;
-}
-/*div dentro de conteiner onde esta login e cadastro*/
-.content{
-    background-color: #ffff;
-    border-radius: 15px;
-    width: 80%;
-    height: 75%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+ 
+ body{
+     font-family: "Open Sans", sans-serif;
+ }
+ 
+ /*Div onde esta os dois conteudos*/
+ .conteiner{
     display: flex;
-    justify-content: space-between;
-    align-items: center;   
-    position: relative;
-}
-
-.content::before{
-    content: "";
-    position: absolute;
-    background-color: #5faf58;
-    width: 40%;
-    height: 100%;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-    left: 0;
-}
-
-/*Div onde esta o login*/
-.first-content{
-    display: flex;
-}
-
-
-.first-content .segunda-coluna{
-    z-index: 11;
-}
-
-/*div onde fica a descricao*/
-.primeira-coluna{
-    text-align: center;
-    width: 40%;
-    z-index: 10;
-}
-
-/*div onde fica os inputs */
-.segunda-coluna{
-    display: flex;
-    width: 60%;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-}
-
-.titulo{
-    font-size: 28px;
-    font-weight: bold;
-    text-transform: capitalize;
-}
-
-.titulo-primary{
-    color: #ffff;
-}
-
-.titulo-second{
-    color: #5faf58;/*#58af9b*/
-}
-
-.descricao{
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 30px;
-}
-
-.descricao-primary{
-    color: #ffff;
-}
-
-.descricao-second{
-    color: #7f8c8d;
-}
-
-.btn{
-    border-radius: 15px;
-    text-transform: uppercase;
-    color: #ffff;
-    font-size: 12px;
-    padding: 10px 50px;
-    cursor: pointer;
-    font-weight: bold;
-    width: 150px;
-    align-self: center;
-    border-width: 0px;
-}
-
-.btn-primary{
-    background-color: transparent;
-    border: 1px solid #fff;
-    transition: background-color 0.5s;
-}
-
-.btn-primary:hover{
-    background-color: #fff;
-    color: #58af9b;
-}
-
-.btn-second{
-    background-color: #5faf58;
-    border: 1px solid #5faf58;
-    transition: background-color 0.5s;
-}
-
-.btn-second:hover{
-    background-color: #fff;
-    border: 1px solid #5faf58;
-    color: #58af6b;
-}
-
-
-.form{
-    display: flex;
-    flex-direction: column;
-    width: 65%;
-}
-
-.form input{
-    height: 45px;
-    border: none;
-    background-color: #ecf0f1;
-    margin: 8px;
-}
-
-
-input:focus, select:focus {
-    outline: 1px solid #55a8d1; 
-    box-shadow: 0 0 5px 2px #68c5f3; 
-}
-
-.form .gru-input{
-    display: flex;
-    flex-direction: column;
-}
-
-
-.form .gru-input label{
-    font-family: "open sans", sans-serif;
-    font-size: 13px;
-    margin-top: 3px;
-    margin-bottom: 1px;
-    margin-left: 8px;
-    color: #7f8c8d;
-}
-
-
-.form .gru-input input{
-    width: 100%;
-    height: 39px;
-}
-
-.form .gru-input-second{
-    display: flex;
-    flex-direction: row;
-}
-
-.form .gru-input-second input{
-    width: 95%;
-}
-
-.form .gru-input select{
-    width: 100%;
-    height: 35px;
-    border: none;
-    background-color: #ecf0f1;
-    margin: 8px;
-}
-
-
-/*div de cadastro*/
-.second-content{
-    position: absolute;
-    display: flex;
-}
-
-
-.second-content .primeira-coluna{
-    order: 2;
-    z-index: -1;
-}
-
-.second-content .segunda-coluna{
-    order: 1;
-    z-index: -1;
-}
-
-
-.sing-in-js  .first-content .primeira-coluna, 
-.sing-in-js  .first-content .segunda-coluna{
-    z-index: -1;
-}
-
-
-.sing-in-js .second-content .primeira-coluna,
-.sing-in-js .second-content .segunda-coluna{
-    z-index: 11;
-}
-
-/*Quando estiver na tela de cadastro*/
-.sing-in-js .content::before{
-    left: 60%;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-}
-
-.sing-up-js .second-content .primeira-coluna,
-.sing-up-js .second-content .segunda-coluna{
-    z-index: -1;
-}
-
-
-.sing-up-js .first-content .primeira-coluna,
-.sing-up-js .first-content .segunda-coluna{
-    z-index: 11;
-}
-
-.flash {
-    color: red;
-    margin-top: 8px;
-    font-size: small;
-    margin-left: 8px;
-    margin-bottom: 1px;
-}
+    height: 100vh;
+    background-color:  #E0F2F1;
+ }
+ 
+ i{
+     width: 7px;
+     height: 7px;
+     background-color: #00796B;
+ }
+ /*div dentro de conteiner onde esta login e cadastro*/
+ .content{
+     background-color: #ffff;
+     border-radius: 15px;
+     width: 80%;
+     height: 75%;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;   
+     position: relative;
+ }
+ 
+ .content::before{
+     content: "";
+     position: absolute;
+     background-color: #00796B;
+     width: 40%;
+     height: 100%;
+     border-top-left-radius: 15px;
+     border-bottom-left-radius: 15px;
+     left: 0;
+ }
+ 
+ /*Div onde esta o login*/
+ .first-content{
+     display: flex;
+ }
+ 
+ .first-content .segunda-coluna{
+     z-index: 11;
+ }
+ 
+ /*div onde fica a descricao*/
+ .primeira-coluna{
+     text-align: center;
+     width: 40%;
+     z-index: 10;
+ }
+ 
+ /*div onde fica os inputs */
+ .segunda-coluna{
+     display: flex;
+     width: 60%;
+     flex-direction: column;
+     align-items: center;
+ }
+ 
+ .titulo{
+     font-size: 28px;
+     font-weight: bold;
+     text-transform: capitalize;
+ }
+ 
+ .titulo-primary{
+     color: #ffff;
+ }
+ 
+ .titulo-second{
+     color: #00796B;/*#58af9b*/
+ }
+ 
+ .descricao{
+     font-size: 14px;
+     font-weight: 300;
+     line-height: 30px;
+ }
+ 
+ .descricao-primary{
+     color: #ffff;
+ }
+ 
+ .descricao-second{
+     color: #7f8c8d;
+ }
+ 
+ .btn{
+     border-radius: 15px;
+     text-transform: uppercase;
+     color: #ffff;
+     font-size: 12px;
+     padding: 10px 50px;
+     cursor: pointer;
+     font-weight: bold;
+     width: 150px;
+     align-self: center;
+     border-width: 0px;
+ }
+ 
+ .btn-primary{
+     background-color: transparent;
+     border: 1px solid #fff;
+     transition: background-color 0.5s;
+ }
+ 
+ .btn-primary:hover{
+     background-color: #fff;
+     color: #58af9b;
+ }
+ 
+ .btn-second{
+     background-color: #00796B;
+     border: 1px solid #00796B;
+     transition: background-color 0.5s;
+ }
+ 
+ .btn-second:hover{
+     background-color: #fff;
+     border: 1px solid #00796B;
+     color: #58af6b;
+ }
+ 
+ .form{
+     display: flex;
+     flex-direction: column;
+     width: 65%;
+ }
+ 
+ .form .gru-input {
+     display: flex;
+     flex-direction: column;
+     margin-bottom: 15px;
+ }
+ 
+ .form label {
+     font-size: 14px;
+     font-weight: bold;
+     color: #555;
+     margin-bottom: 5px;
+ }
+ 
+ .form input,select {
+     width: 100%;
+     height: 40px;
+     border: 1px solid #ccc;
+     border-radius: 8px;
+     padding: 8px 12px;
+     font-size: 14px;
+     transition: border-color 0.3s, box-shadow 0.3s;
+ }
+ 
+ .form input:focus {
+     outline: none;
+     border-color: #00796B;
+     box-shadow: 0 0 5px rgba(95, 175, 88, 0.5);
+ }
+ 
+ .form input::placeholder {
+     color: #aaa;
+     font-size: 13px;
+ }
+ 
+ .form .gru-input-second{
+     display: flex;
+     flex-direction: row;
+ }
+ 
+ .form .gru-input-second input{
+     width: 95%;
+ }
+ 
+ .form .gru-input select{
+     width: 100%;
+     height: 40px;
+     border: 1px solid #ccc;
+     border-radius: 8px;
+     padding: 8px 12px;
+     font-size: 14px;
+     transition: border-color 0.3s, box-shadow 0.3s;
+ }
+ 
+ /*div de cadastro*/
+ .second-content{
+     position: absolute;
+     display: flex;
+ }
+ 
+ .second-content .primeira-coluna{
+     order: 2;
+     z-index: -1;
+ }
+ 
+ .second-content .segunda-coluna{
+     order: 1;
+     z-index: -1;
+ }
+ 
+ .sing-in-js  .first-content .primeira-coluna, 
+ .sing-in-js  .first-content .segunda-coluna{
+     z-index: -1;
+ }
+ 
+ .sing-in-js .second-content .primeira-coluna,
+ .sing-in-js .second-content .segunda-coluna{
+     z-index: 11;
+ }
+ 
+ /*Quando estiver na tela de cadastro*/
+ .sing-in-js .content::before{
+     left: 60%;
+     border-top-left-radius: 0;
+     border-bottom-left-radius: 0;
+     border-top-right-radius: 15px;
+     border-bottom-right-radius: 15px;
+ }
+ 
+ .sing-up-js .second-content .primeira-coluna,
+ .sing-up-js .second-content .segunda-coluna{
+     z-index: -1;
+ }
+ 
+ .sing-up-js .first-content .primeira-coluna,
+ .sing-up-js .first-content .segunda-coluna{
+     z-index: 11;
+ }
+ 
+ .flash {
+     color: red;
+     margin-top: 8px;
+     font-size: small;
+     margin-left: 8px;
+     margin-bottom: 1px;
+ }
+ 
